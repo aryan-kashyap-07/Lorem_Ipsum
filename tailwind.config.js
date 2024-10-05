@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        hblue1:'#245DA5',
+        hblue2:'#023E8A'
+      },
+      fontFamily: {
+        rubik: ['Rubik'],
+      },
+    },
   },
   plugins: [],
 }
