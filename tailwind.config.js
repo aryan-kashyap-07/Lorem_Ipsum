@@ -8,7 +8,8 @@ export default {
     extend: {
       colors:{
         hblue1:'#245DA5',
-        hblue2:'#023E8A'
+        hblue2:'#023E8A',
+        blue3:'#DCEEFF'
       },
       fontFamily: {
         rubik: ['Rubik'],
