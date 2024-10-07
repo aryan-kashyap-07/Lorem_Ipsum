@@ -36,6 +36,8 @@ const Home = () => {
                 <img src={institute} alt="" className=' w-20 h-20' />
                 <span className=' font-rubik mt-2 text-xl font-normal'>Institution</span>
             </div>
+        </div>
+        <div>
             
         </div>
     </div>
