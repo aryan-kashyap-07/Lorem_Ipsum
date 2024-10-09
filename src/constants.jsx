@@ -8,3 +8,12 @@ export const statisticsData = [
     { value: "4012", description: "Institutes registered under AICTE" },
     { value: "180 Cr", description: "Funds Allocted for PMSSS" }
 ];
+
+export const menuItems = [
+    { id: 1, title: "Lorem Ipsum 1", content: "Content for Lorem Ipsum 1" },
+    { id: 2, title: "Lorem Ipsum 2", content: "Content for Lorem Ipsum 2" },
+    { id: 3, title: "Lorem Ipsum 3", content: "Content for Lorem Ipsum 3" },
+    { id: 4, title: "Lorem Ipsum 4", content: "Content for Lorem Ipsum 4" },
+    { id: 5, title: "Lorem Ipsum 5", content: "Content for Lorem Ipsum 5" },
+    { id: 6, title: "Lorem Ipsum 6", content: "Content for Lorem Ipsum 6" },
+];

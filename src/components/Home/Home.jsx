@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeroImg from '../../assets/HeroImg.png'
 import arrow from '../../assets/arrow.png'
 import student from '../../assets/student.png'
@@ -8,10 +8,12 @@ import sag from '../../assets/sag.png'
 import overview from '../../assets/overview.png'
 import { OVERVIEW_TEXT } from '../../constants'
 import { statisticsData } from '../../constants'
+import { menuItems } from '../../constants'
 
 const Home = () => {
 
-    
+    const [activeIndex, setActiveIndex] = useState(null);
+
     return (
         <div>
             <div className='flex relative'>
@@ -66,11 +68,48 @@ const Home = () => {
                             ))}
                         </div>
                     </div>
-                            <img src={overview} alt="" className=' w-[378px] h-[450px] mt-[100px] ml-10'/>
+                    <img src={overview} alt="" className=' w-[378px] h-[450px] mt-[100px] ml-10' />
                     <div>
                     </div>
                 </div>
             </div>
+            <div className=' bg-blue3 h-auto'>
+                <div className=' ml-[208px] py-[96px] flex gap-6'>
+                    <div className=" w-48 bg-white border-x border-[#EDF7FE]">
+                        <ul className="">
+                            {menuItems.map((item, index) => (
+                                <li key={item.id}>
+                                    <button
+                                        className={`w-full text-center py-2 ${activeIndex === index
+                                            ? ' bg-hblue1 text-white'
+                                            : 'bg-white text-black hover:bg-blue-500 hover:text-white'
+                                            }`}
+                                        onClick={() => setActiveIndex(index)}
+                                    >
+                                        {item.title}
+                                    </button>
+
+                                </li>
+                            ))}
+
+                        </ul>
+
+                    </div>
+                    <div className="flex bg-gray-100 p-4 w-4/5 items-center justify-center">
+                        {activeIndex !== null ? (
+                            <div className="p-6 bg-white shadow-md rounded-md w-11/12">
+                                <h2 className="text-2xl font-bold">{menuItems[activeIndex].title}</h2>
+                                <p className="mt-4">{menuItems[activeIndex].content}</p>
+                            </div>
+                        ) : (
+                            <div className="text-gray-500 text-center">
+                                <p>Select an option from the menu to view the content</p>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 
