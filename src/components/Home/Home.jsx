@@ -9,6 +9,7 @@ import overview from '../../assets/overview.png'
 import { OVERVIEW_TEXT } from '../../constants'
 import { statisticsData } from '../../constants'
 import { menuItems } from '../../constants'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -26,11 +27,13 @@ const Home = () => {
                     </span>
                 </button>
             </div>
-            <div className=' h-56 w-full bg-blue3 flex justify-around'>
-                <div className=' w-56 h-32 my-auto bg-hblue2 rounded-xl flex flex-col items-center justify-center text-white font-rubik'>
+            <div className=' h-56 w-full bg-blue3 flex justify-around items-center'>
+                <Link to={'student/login'}>
+                    <div className=' w-56 h-32 my-auto bg-hblue2 rounded-xl flex flex-col items-center justify-center text-white font-rubik'>
                     <img src={student} alt="" className=' w-24 h-16 mt-3' />
                     <span className=' font-rubik mt-2 text-xl font-normal'>Student</span>
                 </div>
+                </Link>
                 <div className=' w-56 h-32 my-auto bg-hblue2 rounded-xl flex flex-col items-center justify-center text-white font-rubik'>
                     <img src={sag} alt="" className=' w-24 h-16' />
                     <span className=' font-rubik mt-2 text-xl font-normal'>SAG Officer</span>
